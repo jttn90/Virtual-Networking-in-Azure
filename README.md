@@ -131,6 +131,10 @@ In this lab, I will create virtual networks, subnets, configure a network and an
   - Name: sensor-vm
   - IP address: 10.1.1.14
   
+<img src="https://imgur.com/qf06th2.png" alt="private dns zone" />
+
+<h2>Summary of lab</h2>
+
 
 
 <img src="" alt="" />
