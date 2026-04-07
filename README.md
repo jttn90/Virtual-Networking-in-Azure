@@ -109,6 +109,9 @@ In this lab, I will create virtual networks, subnets, configure a network and an
   - Leave Type, alias, TTL fields at default
   - Name: www
   - IP address: 10.1.1.14
+ 
+<img src="https://imgur.com/xe0qhqn.png" alt="public dns zone" />
+
 - Click add
 - Open a command prompt on your own machine
 - Enter the command: nslookup [domain name] [name server]
@@ -121,7 +124,7 @@ In this lab, I will create virtual networks, subnets, configure a network and an
 - Choose the correct resource group eg. az104-rg4, give it a unique name eg. private.contoso102938.com
 - Select review + create and create
 - After the resource is deployed, click Go to resource
-- Expand the DNS management blde, then Virtual network links
+- Expand the DNS management blade, then Virtual network links
 - Configure:
   - Link name: manufacturing-link
   - Virtual network: ManufacturingVnet
@@ -134,8 +137,11 @@ In this lab, I will create virtual networks, subnets, configure a network and an
 <img src="https://imgur.com/qf06th2.png" alt="private dns zone" />
 
 <h2>Summary of lab</h2>
+A virtual network named CoreServicesNet with an IP address of 10.20.0.0/16 was created inside a new resource group named az104-rg4. Within CoreServicesNet, 2 subnets were created named SharedServicesSubnet with an IP address of 10.20.10.0/24 and DatabaseSubnet with an IP address of 10.20.20.0/24. ARM templates and parameters of this vnet were exported and modified to create another vnet called ManufacturingVnet with an IP address of 10.30.0.0/16. 2 subnets within this vnet were also created from the templates named SensorSubnet1 with an IP address of 10.30.20.0/24 and SensorSubnet2 with an IP address of 10.30.21.0/24. 
+<br><br>
+To ensure traffic was secure between virtual networks and virtual machines, a network security group was created for CoreServicesNet and associated with the SharedServicesSubnet. An application security group was created and applied to the inbound security rules of the network security group to allow only web-based traffic, for either unencrypted or encrypted connections. An outbound security rule to deny internet access was also created.
+<br><br>
+To allow public domain name resolution, a public DNS zone was created. The A record was modified to point to a specific IP address, which in reality would have been an IP address of a web server. Also, to allow machines within the network to utilise DNS, a private DNS zone was created. This zone was configured to the ManufacturingVnet and specified an IP address for a virtual machine in this vnet. In reality, the IP address would be one that specified a VM for a manufacturing device.
 
 
 
-<img src="" alt="" />
-<img src="" alt="" />
