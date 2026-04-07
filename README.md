@@ -99,9 +99,8 @@ In this lab, I will create virtual networks, subnets, configure a network and an
 
 - Search DNS zones in the Azure portal
 - Click Create
-- Enter the following
-  - Choose the correct resource group eg. az104-rg4, give it a unique name eg. contoso1029.com
-- Review + create and create
+- Choose the correct resource group eg. az104-rg4, give it a unique name eg. contoso102938.com
+- Select review + create and create
 - After DNS has finished deploying, click Go to resource
 - Copy or note down one of the name servers eg. ns1-02.azure.dns.com
 - Expand DNS management then Recordsets
@@ -112,9 +111,27 @@ In this lab, I will create virtual networks, subnets, configure a network and an
   - IP address: 10.1.1.14
 - Click add
 - Open a command prompt on your own machine
-- Enter the command: nslookup <domain name> <name server>
+- Enter the command: nslookup [domain name] [name server]
 - Verify that the domain name resolves to the specified IP address 10.1.1.14
 
-<img src="" alt="" />
+<img src="https://imgur.com/sAl4A62.png" alt="nslookup command example" />
+
+- Search Private dns zones in the Azure portal
+- Select Create+
+- Choose the correct resource group eg. az104-rg4, give it a unique name eg. private.contoso102938.com
+- Select review + create and create
+- After the resource is deployed, click Go to resource
+- Expand the DNS management blde, then Virtual network links
+- Configure:
+  - Link name: manufacturing-link
+  - Virtual network: ManufacturingVnet
+- Click create
+- Expand the DNS management > Recordsets
+- Add virtual machines that need private name resolution
+  - Name: sensor-vm
+  - IP address: 10.1.1.14
+  
+
+
 <img src="" alt="" />
 <img src="" alt="" />
