@@ -75,7 +75,7 @@ In this lab, I will create virtual networks, subnets, configure a network and an
 - Click Add
 
 <br>
-<img src="https://imgur.com/lVuMMVp.png" alt="nsg inbound rules list" />
+<img src="https://imgur.com/sM9GQmQ.png" alt="nsg inbound rules list" />
 <br>
 
 - Under settings of the current network security group, click on Outbound security rules then +Add
