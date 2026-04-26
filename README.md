@@ -1,5 +1,5 @@
 <h1>Virtual Networking in Azure</h1>
-In this lab, I will create virtual networks, subnets, configure a network and an application ssecurity group as well as configure DNS zones.
+In this lab, I will create virtual networks, subnets, configure a network and an application security group as well as configure DNS zones.
 
 <h2>Networking Diagram</h2>
 <img src="https://imgur.com/8XzQ9KI.png" alt="networking diagram" />
